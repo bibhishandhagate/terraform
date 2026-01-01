@@ -25,7 +25,7 @@ variable "db_engine" {
 variable "db_engine_version" {
   description = "The version of the database engine"
   type        = string
-  default     = "15.7"
+  default     = "17.6"
 }
 variable "db_engine_pggroup" {
   description = "The version of the parameter group"
@@ -76,3 +76,4 @@ variable "db_maintenance_window" {
   type        = string
   default     = "sun:05:00-sun:06:00"
 }
+
