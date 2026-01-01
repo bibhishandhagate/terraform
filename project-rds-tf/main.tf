@@ -9,25 +9,6 @@ resource "aws_security_group" "rds_sg" {
   vpc_id = var.vpc_id
 
   ingress {
-    from_port   = 5432
-    to_port     = 5432
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]  # OK for testing only
-  }
-
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  tags = {
-    Name = "rds_security_group"
-  }
-}
-
-  ingress {
     from_port   = 5432  # PostgreSQL default port (replace with your DB engine's port if different)
     to_port     = 5432
     protocol    = "tcp"
